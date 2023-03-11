@@ -66,7 +66,7 @@ export default function Login() {
             >
               <Modal.Header>
                 <Text id="modal-title" size={18}>
-                  Register
+                  Mendaftar
                 </Text>
               </Modal.Header>
               <Modal.Body>
@@ -88,9 +88,9 @@ export default function Login() {
                 />
                 <Row justify="space-between">
                   <Checkbox>
-                    <Text size={14}>Remember me</Text>
+                    <Text size={14}>ingat saya</Text>
                   </Checkbox>
-                  <Text size={14}>Forgot password?</Text>
+                  <Text size={14}>Lupa password?</Text>
                 </Row>
               </Modal.Body>
               <Modal.Footer>
@@ -103,7 +103,7 @@ export default function Login() {
                   color="error"
                   onPress={closeHandler}
                 >
-                  Close
+                  Batal
                 </Button>
                 <Button
                   bordered
@@ -112,7 +112,7 @@ export default function Login() {
                   auto
                   onPress={closeHandler}
                 >
-                  Sign in
+                  Kirim
                 </Button>
               </Modal.Footer>
             </Modal>

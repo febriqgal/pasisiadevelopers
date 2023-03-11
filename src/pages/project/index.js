@@ -1,7 +1,7 @@
 import Layout from "@/components/layout";
-import React from "react";
+import React, { useState } from "react";
 import Styles from "../../styles/Home.module.css";
-import { Grid, Card, Text } from "@nextui-org/react";
+import { Grid, Card, Text, Loading } from "@nextui-org/react";
 export default function Project() {
   const MockItem = ({ text }) => {
     return (
@@ -20,8 +20,23 @@ export default function Project() {
       </Card>
     );
   };
+
+  const [isLoading, setIsLoading] = useState(true);
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 1000);
+
+  if (isLoading) {
+    return (
+      <Layout>
+        <div className={Styles.center}>
+          <Loading />
+        </div>
+      </Layout>
+    );
+  }
   return (
-    <Layout>
+    <Layout title={"Project - "}>
       <Grid.Container className="my-[92px] px-16" gap={2} justify="center">
         <Grid className="h-[100px]" xs={6}>
           <MockItem text="1" />

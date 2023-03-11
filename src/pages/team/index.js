@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Layout from "@/components/layout";
-import React from "react";
+import React, { useState } from "react";
 import Styles from "../../styles/Home.module.css";
-import { Card, Col, Row, Text, Button } from "@nextui-org/react";
+import { Card, Col, Row, Text, Button, Loading } from "@nextui-org/react";
 import Febriqgal from "../../../public/febriqgal.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import Default from "../../../public/default.png";
-export default function index() {
+export default function Team() {
   const people = [
     {
       name: "Febriqgal Purnama, S.Kom.",
@@ -48,6 +48,19 @@ export default function index() {
 
     // More people...
   ];
+  const [isLoading, setIsloading] = useState(true);
+  setTimeout(() => {
+    setIsloading(false);
+  }, 1000);
+  if (isLoading) {
+    return (
+      <Layout>
+        <div className={Styles.center}>
+          <Loading />
+        </div>
+      </Layout>
+    );
+  }
   return (
     <Layout title={"Team - "}>
       <ul
