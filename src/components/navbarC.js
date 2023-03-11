@@ -125,7 +125,7 @@ export default function NavbarC() {
   ];
   return (
     <Navbar
-      className="px-16 fixed border-b-2"
+      className="px-16 fixed shadow-xl"
       shouldHideOnScroll
       variant="sticky"
     >

@@ -25,7 +25,7 @@ export default function Home() {
   } else {
     return (
       <Layout>
-        <div className="my-[120px]  px-32 grid lg:grid-cols-2 text-center lg:text-start lg:items-center">
+        <div className="min-h-screen  px-32 grid lg:grid-cols-2 text-center lg:text-start lg:items-center">
           <TypeIt className="font-bold lg:text-2xl text-[#626468]">
             Hi, We Are Pasisia Developers
           </TypeIt>
@@ -35,6 +35,21 @@ export default function Home() {
               src={Header}
               alt="#"
             />
+          </div>
+        </div>
+
+        <div className="grid  grid-cols-1 lg:grid-cols-3 px-16 text-center gap-5 mb-14">
+          <div
+            className={`border-2 p-7 shadow-xl duration-700 z-50 hover:bg-slate-500 hover:text-white rounded-lg hover:-translate-y-2`}
+          >
+            Eu culpa duis incididunt cillum amet.
+          </div>
+          <div className="border-2 p-7 shadow-xl duration-700 z-50 hover:bg-slate-500 hover:text-white rounded-lg hover:-translate-y-2">
+            Lorem velit excepteur ut anim dolor amet esse qui pariatur irure
+            aliquip mollit laboris eiusmod.
+          </div>
+          <div className="border-2 p-7 shadow-xl duration-700 z-50 hover:bg-slate-500 hover:text-white rounded-lg hover:-translate-y-2">
+            Est fugiat cillum cillum ex exercitation aliqua consectetur.
           </div>
         </div>
         <Marquee

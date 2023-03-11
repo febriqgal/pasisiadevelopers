@@ -6,6 +6,26 @@
   padding: 6rem;
   min-height: 100vh;
 }
+.customshapedividerbottom1678532433 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.customshapedividerbottom1678532433 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 87px;
+}
+
+.customshapedividerbottom1678532433 .shape-fill {
+  fill: #ffffff;
+}
 .center {
   display: flex;
   flex-direction: column;
