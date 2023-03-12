@@ -124,58 +124,54 @@ export default function NavbarC() {
     },
   ];
   return (
-    <Navbar
-      className="px-16 fixed shadow-xl"
-      shouldHideOnScroll
-      variant="sticky"
-    >
-      <Navbar.Toggle showIn="xs" />
-      <Navbar.Brand
-        css={{
-          "@xs": {
-            w: "12%",
-          },
-        }}
-      >
-        <Link href={"/"} title={"Beranda Pasisia Developers"}>
-          <Image height={50} src={Logo} alt={"#"} />
-        </Link>
-      </Navbar.Brand>
-      <Navbar.Content
-        className="lg:flex gap-6 text-[#626468] font-medium hidden"
-        enableCursorHighlight
-        hideIn="xs"
-        variant="highlight"
-      >
-        {navigation.map((e, i) => {
-          return (
-            <Link
-              className={
-                route.pathname === e.href
-                  ? "text-black font-bold"
-                  : "hover:text-black"
-              }
-              key={i}
-              href={e.href}
-            >
-              <div className="flex gap-2 justify-center items-center">
-                <e.icon className="h-6 w-6" />
-                {e.title}
-              </div>
-            </Link>
-          );
-        })}
-      </Navbar.Content>
-      <Navbar.Content
-        className="lg:hidden"
-        css={{
-          "@xs": {
-            w: "12%",
-            jc: "flex-end",
-          },
-        }}
-      >
-        {/* <Dropdown placement="bottom-right">
+    <Navbar css={{}} className="fixed" shouldHideOnScroll variant="sticky">
+      <div className="flex justify-between w-full items-center px-16">
+        <Navbar.Toggle showIn="xs" />
+        <Navbar.Brand
+          css={{
+            "@xs": {
+              w: "12%",
+            },
+          }}
+        >
+          <Link href={"/"} title={"Beranda Pasisia Developers"}>
+            <Image height={50} src={Logo} alt={"#"} />
+          </Link>
+        </Navbar.Brand>
+        <Navbar.Content
+          className="lg:flex gap-6 text-[#626468] font-medium hidden"
+          hideIn="xs"
+          variant="highlight"
+        >
+          {navigation.map((e, i) => {
+            return (
+              <Link
+                className={
+                  route.pathname === e.href
+                    ? "text-slate-900 font-bold"
+                    : "hover:text-slate-900"
+                }
+                key={i}
+                href={e.href}
+              >
+                <div className="flex gap-2 justify-center items-center">
+                  <e.icon className="h-6 w-6" />
+                  {e.title}
+                </div>
+              </Link>
+            );
+          })}
+        </Navbar.Content>
+        <Navbar.Content
+          className="lg:hidden"
+          css={{
+            "@xs": {
+              w: "12%",
+              jc: "flex-end",
+            },
+          }}
+        >
+          {/* <Dropdown placement="bottom-right">
           <Navbar.Item>
             <Dropdown.Trigger>
               <Avatar
@@ -209,32 +205,31 @@ export default function NavbarC() {
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown> */}
-      </Navbar.Content>
-      <Navbar.Collapse disableAnimation>
-        {navigation.map((e, i) => (
-          <Navbar.CollapseItem
-            key={i}
-            activeColor="warning"
-            css={{
-              color: i === navigation.length - 1 ? "$error" : "",
-            }}
-            isActive={i === 2}
-          >
-            <Link
-              color="inherit"
-              css={{
-                minWidth: "100%",
-              }}
-              href={e.href}
-            >
-              <div className="flex gap-2 justify-center items-center">
-                <e.icon className="h-6 w-6" />
-                {e.title}
-              </div>
-            </Link>
-          </Navbar.CollapseItem>
-        ))}
-      </Navbar.Collapse>
+        </Navbar.Content>
+        <Navbar.Collapse disableAnimation>
+          {navigation.map((e, i) => (
+            <Navbar.CollapseItem key={i} activeColor="warning">
+              <Link
+                className={
+                  route.pathname === e.href
+                    ? "text-slate-900 font-bold"
+                    : "hover:text-slate-900"
+                }
+                color="inherit"
+                css={{
+                  minWidth: "100%",
+                }}
+                href={e.href}
+              >
+                <div className="flex gap-2 justify-center items-center">
+                  <e.icon className="h-6 w-6" />
+                  {e.title}
+                </div>
+              </Link>
+            </Navbar.CollapseItem>
+          ))}
+        </Navbar.Collapse>
+      </div>
     </Navbar>
   );
 }

@@ -1,36 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 /* This example requires Tailwind CSS v2.0+ */
-const navigation = [
-  { name: "About", href: "#" },
-  { name: "Blog", href: "#" },
-  { name: "Jobs", href: "#" },
-  { name: "Press", href: "#" },
-  { name: "Accessibility", href: "#" },
-  { name: "Partners", href: "#" },
-  ,
-];
 
 export default function FooterC() {
   const route = useRouter();
   return (
-    <footer className="bg-white border-t-2">
+    <footer className="bg-slate-900">
       <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-        <nav
-          className="-mx-5 -my-2 flex flex-wrap justify-center"
-          aria-label="Footer"
-        >
-          {navigation.map((item) => (
-            <div key={item.name} className="px-5 py-2">
-              <a
-                href={item.href}
-                className="text-base text-gray-500 hover:text-gray-900"
-              >
-                {item.name}
-              </a>
-            </div>
-          ))}
-        </nav>
         <div className="mt-8 flex justify-center space-x-6">
           {/* ig */}
           <Link
@@ -38,7 +14,7 @@ export default function FooterC() {
             href={"https://www.instagram.com/febriqgal_/"}
           >
             <svg
-              className=" fill-slate-500 hover:fill-slate-900 hover:-translate-y-2 duration-700 h-6"
+              className=" fill-slate-50  hover:-translate-y-2 duration-700 h-6"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +37,7 @@ export default function FooterC() {
             href={"https://www.instagram.com/febriqgal_/"}
           >
             <svg
-              className=" fill-slate-500 hover:fill-slate-900 hover:-translate-y-2 duration-700 h-6"
+              className=" fill-slate-50  hover:-translate-y-2 duration-700 h-6"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +55,7 @@ export default function FooterC() {
             href={"https://www.instagram.com/febriqgal_/"}
           >
             <svg
-              className=" fill-slate-500 hover:fill-slate-900 hover:-translate-y-2 duration-700 h-6"
+              className=" fill-slate-50  hover:-translate-y-2 duration-700 h-6"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +72,7 @@ export default function FooterC() {
             href={"https://www.instagram.com/febriqgal_/"}
           >
             <svg
-              className=" fill-slate-500 hover:fill-slate-900 hover:-translate-y-2 duration-700 h-6"
+              className=" fill-slate-50  hover:-translate-y-2 duration-700 h-6"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
