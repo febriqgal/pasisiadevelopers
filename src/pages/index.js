@@ -45,7 +45,7 @@ export default function Home() {
               Hi, We Are Pasisia Developers!
             </TypeIt>
             <p className="mt-6 text-xl text-indigo-100 max-w-3xl">
-              Web App Developer, and Mobile App Developer.
+              WE HAVE DONE BEFORE WE THINK
             </p>
           </div>
         </div>
