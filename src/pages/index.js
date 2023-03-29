@@ -26,7 +26,9 @@ export default function Home() {
     );
   } else {
     return (
+    
       <Layout>
+        h1
         <div className="relative bg-indigo-800 min-h-screen shadow-2xl">
           <div className="absolute inset-0">
             <Image

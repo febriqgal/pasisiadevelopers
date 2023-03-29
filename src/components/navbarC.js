@@ -124,7 +124,12 @@ export default function NavbarC() {
     },
   ];
   return (
-    <Navbar css={{}} className="fixed" shouldHideOnScroll variant="sticky">
+    <Navbar
+      className="fixed"
+      shouldHideOnScroll
+      variant="sticky"
+      maxWidth={"fluid"}
+    >
       <div className="flex justify-between w-full items-center px-16">
         <Navbar.Toggle showIn="xs" />
         <Navbar.Brand
